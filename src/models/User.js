@@ -2,6 +2,12 @@ const { Model, DataTypes } = rquire("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("bcrypt");
 
+class User extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
+
 const schema = {
   id: {
     type: DataTypes.INTEGER,
