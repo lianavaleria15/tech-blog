@@ -1,0 +1,32 @@
+[
+  {
+    "content": "Nothing works for me? Have you really applied this before?!!!",
+    "user_id": 1,
+    "blog_id": 3
+  },
+  {
+    "content": "That's so cool, thanks for your advice! You saved me",
+    "user_id": 2,
+    "blog_id": 1
+  },
+  {
+    "content": "Lorem ipsum works just with a cuppa",
+    "user_id": 3,
+    "blog_id": 2
+  },
+  {
+    "content": "Brilliant tips",
+    "user_id": 2,
+    "blog_id": 3
+  },
+  {
+    "content": "You should be an author! Have you though of doing this as a side hustle?",
+    "user_id": 1,
+    "blog_id": 4
+  },
+  {
+    "content": "Fantastic fox extension should be part of the top saved my life",
+    "user_id": 3,
+    "blog_id": 5
+  }
+]
