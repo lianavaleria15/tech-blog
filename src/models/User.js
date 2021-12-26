@@ -1,6 +1,7 @@
-const { Model, DataTypes } = rquire("sequelize");
 const bcrypt = require("bcrypt");
-const sequelize = require("bcrypt");
+const { Model, DataTypes } = rquire("sequelize");
+
+const connection = require("../config/connection");
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -37,7 +38,7 @@ const options = {
     },
   },
 
-  sequelize,
+  sequelize: connection,
   timestamps: false,
   freezeTableName: true,
   underscored: true,
