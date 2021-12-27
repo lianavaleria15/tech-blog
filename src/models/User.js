@@ -3,12 +3,6 @@ const { Model, DataTypes } = require("sequelize");
 
 const connection = require("../config/connection");
 
-class User extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
-
 const schema = {
   id: {
     type: DataTypes.INTEGER,
@@ -39,11 +33,17 @@ const options = {
   },
 
   sequelize: connection,
-  timestamps: false,
+  timestamps: true,
   freezeTableName: true,
   underscored: true,
   modelName: "user",
 };
+
+class User extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 
 User.init(schema, options);
 

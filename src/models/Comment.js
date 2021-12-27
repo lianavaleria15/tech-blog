@@ -1,8 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const connection = require("../config/connection");
 
-class Comment extends Model {}
-
 const schema = {
   id: {
     type: DataTypes.INTEGER,
@@ -34,11 +32,13 @@ const schema = {
 
 const options = {
   sequelize: connection,
-  timesamp: false,
+  timestamp: true,
   freezeTableName: true,
   underscored: true,
   modelName: "comment",
 };
+
+class Comment extends Model {}
 
 Comment.init(schema, options);
 

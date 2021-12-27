@@ -15,16 +15,19 @@ const seedData = async () => {
   await sequelize.sync({ force: true });
 
   //seed user data
-  await User.bulkCreate(userData, { individualHooks: true, returning: true });
+  await User.bulkCreate(userData);
+
+  console.log("Done seeding user data");
 
   //seed blog post data
-  await Blog.bulkCreate(blogData, { individualHooks: true, returning: true });
+  await Blog.bulkCreate(blogData);
+
+  console.log("Done seeding user data");
 
   //seed comments data
-  await Comment.bulkCreate(commentData, {
-    individualHooks: true,
-    returning: true,
-  });
+  await Comment.bulkCreate(commentData);
+
+  console.log("Done seeding comment data");
 
   process.exit(0);
 };

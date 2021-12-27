@@ -1,6 +1,12 @@
+require("dotenv").config();
 const express = require("express");
 
 const connection = require("./config/connection");
+
+//import models
+const User = require("./models/User");
+const Blog = require("./models/Blog");
+const Comment = require("./models/Comment");
 
 const routes = require("./routes");
 
