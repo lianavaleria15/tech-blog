@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const { Model, DataTypes } = rquire("sequelize");
+const { Model, DataTypes } = require("sequelize");
 
 const connection = require("../config/connection");
 

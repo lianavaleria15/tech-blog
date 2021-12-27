@@ -1,4 +1,4 @@
-const { Model, DataTypes } = rquire("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const connection = require("../config/connection");
 
 class Blog extends Model {}

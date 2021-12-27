@@ -14,4 +14,4 @@ const dbOptions = {
 
 const sequelize = new Sequelize(dbName, dbUser, dbPassword, dbOptions);
 
-module.exports(sequelize);
+module.exports = sequelize;
