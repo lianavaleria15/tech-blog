@@ -46,6 +46,9 @@
   text-align: justify;
 }
 
+.date-user-span {
+  color: #ff6341;
+}
 /*style for signup and login form*/
 .form {
   margin-top: 5rem;
