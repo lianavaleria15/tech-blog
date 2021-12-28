@@ -55,11 +55,13 @@
   color: #ff6341;
 }
 
-.signup-btn {
+.signup-btn,
+.login-btn {
   background-color: #ff6341;
 }
 
-.signup-btn:hover {
+.signup-btn:hover,
+.login-btn:hover {
   background-color: #ffb09f;
   color: #0b101d;
 }
