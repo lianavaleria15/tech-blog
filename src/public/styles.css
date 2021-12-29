@@ -4,6 +4,10 @@
   font-family: "Red Hat Text", sans-serif;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 .navbar,
 .form {
   background-color: #152039;
@@ -67,4 +71,34 @@
 .login-btn:hover {
   background-color: #ffb09f;
   color: #0b101d;
+}
+
+/*single blog page styling*/
+.input {
+  margin-bottom: 0.8rem;
+}
+
+.add-comment {
+  background-color: #0b101d;
+}
+
+.comments-container {
+  /* background-color: #152039; */
+  margin-top: 5rem;
+  width: 50rem;
+}
+.comments-container h4 {
+  text-align: center;
+}
+.comments-container h4,
+.comment h5,
+span {
+  color: #ff6341;
+}
+
+.comment {
+  background-color: white;
+  border-radius: 1rem;
+  margin-bottom: 0rem;
+  text-align: justify;
 }
