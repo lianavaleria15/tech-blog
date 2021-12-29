@@ -76,9 +76,11 @@ p {
 /*single blog page styling*/
 .input {
   margin-bottom: 0.8rem;
+  margin-top: 0.8rem;
 }
 
-.add-comment {
+.add-comment,
+.add-blog {
   background-color: #0b101d;
 }
 
