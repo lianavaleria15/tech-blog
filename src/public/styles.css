@@ -109,3 +109,8 @@ span {
   margin-right: 1rem;
   width: 5rem;
 }
+
+/*dashboard page styling*/
+.add-blog-btn {
+  margin-top: 5rem;
+}
