@@ -83,9 +83,9 @@ p {
 }
 
 .comments-container {
-  /* background-color: #152039; */
   margin-top: 5rem;
-  width: 50rem;
+  margin-bottom: 10rem;
+  width: 40rem;
 }
 .comments-container h4 {
   text-align: center;
@@ -98,7 +98,14 @@ span {
 
 .comment {
   background-color: white;
+  border: 0.1rem solid #ff6341;
   border-radius: 1rem;
   margin-bottom: 0rem;
   text-align: justify;
+}
+
+.edit-btn,
+.delete-btn {
+  margin-right: 1rem;
+  width: 5rem;
 }
