@@ -1,10 +1,18 @@
 const { Router } = require("express");
 
 //import controller fs
-const { renderDashboard } = require("../../controllers/view");
+const {
+  renderDashboard,
+  renderCreateBlog,
+  renderEditBlog,
+} = require("../../controllers/view/privateControllers");
 
 const router = Router();
 
 router.get("/dashboard", renderDashboard);
 
-module.exports = router
+router.get("/add-blog", renderCreateBlog);
+
+router.get("/edit-blog", renderEditBlog);
+
+module.exports = router;

@@ -6,7 +6,7 @@ const {
   renderLoginPage,
   renderSignupPage,
   renderBlog,
-} = require("../../controllers/view");
+} = require("../../controllers/view/publicControllers");
 
 const router = Router();
 
