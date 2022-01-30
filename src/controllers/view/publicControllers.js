@@ -1,4 +1,4 @@
-const { Blog, User } = require("../../models");
+const { Blog, User, Comment } = require("../../models");
 
 const renderHomePage = async (req, res) => {
   try {
@@ -26,8 +26,21 @@ const renderSignupPage = (req, res) => {
   return res.render("signup");
 };
 
-const renderBlog = (req, res) => {
-  return res.render("single-blog");
+const renderBlog = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const blogData = await Blog.findByPk(id, {
+      include: [{ model: User }, { model: Comment, include: User }],
+    });
+
+    const blog = blogData.get({ plain: true });
+
+    return res.render("single-blog", { blog });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Failed to render single blog page" });
+  }
 };
 
 module.exports = {

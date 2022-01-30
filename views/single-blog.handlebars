@@ -1,0 +1,48 @@
+<header>
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <img src="../images/logo.png" alt="Cuppa Tech logo" class="logo-img" />
+
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Dashboard</a>
+          <a class="nav-link" href="#">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<!--blog post container-->
+<main class="main">
+  <div class="d-flex d-sm-flex-column flex-row blogs-container">
+    {{#if blog}} {{>blog-card}} {{/if}}
+  </div>
+  <!--add comment section-->
+  
+  <form class="form container center_div add-comment" style="width: 30rem">
+    <div class="d-flex flex-column align-items-between">
+      <textarea
+        type="text"
+        id="new-comment"
+        rows="2"
+        class="input"
+        placeholder="add comment here"
+      ></textarea>
+      <button type="submit" class="btn login-btn">Leave comment</button>
+    </div>
+  </form>
+  <!--comments section-->
+  <div class="container d-flex flex-column comments-container">
+    <div class="row">
+      <div class="col-sm-5 col-md-6 col-12 pb-4">
+        <h4>Comments</h4>
+         {{#each blog.comments}}
+       {{>comments}}
+      {{/each}}
+      </div>
+      <!--each comment container-->
+      </div>
+  </div>
+</main>
