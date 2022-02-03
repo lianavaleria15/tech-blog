@@ -10,4 +10,12 @@ const logout = (req, res) => {
   res.send("signin");
 };
 
-module.exports = { signIn, login, logout };
+const auth = (req, res, next) => {
+  if (!req.session.isLoggedIn) {
+    return res.redirect("login");
+  }
+
+  next();
+};
+
+module.exports = { signIn, login, logout, auth };

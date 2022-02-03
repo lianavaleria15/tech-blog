@@ -7,6 +7,7 @@ const router = Router();
 
 router.use(publicRoutes);
 // add auth middleware here
+router.use(auth);
 router.use(privateRoutes);
 
 module.exports = router;

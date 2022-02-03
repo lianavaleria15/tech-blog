@@ -13,6 +13,6 @@ router.use("/", viewRoutes);
 
 router.use("/auth", authRoutes);
 
-// router.use("/api", apiRoutes);
+router.use("/api", apiRoutes);
 
 module.exports = router;

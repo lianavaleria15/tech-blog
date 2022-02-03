@@ -18,8 +18,10 @@ const renderDashboard = (req, res) => {
 };
 
 const renderLoginPage = (req, res) => {
-  // return res.render("login");
-  res.send("login");
+  if (req.session.isLoggedIn) {
+    return res.redirect("/dashboard");
+  }
+  return res.render("login");
 };
 
 const renderSignupPage = (req, res) => {
